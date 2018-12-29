@@ -5,6 +5,11 @@ const morgan = require('morgan');
 
 const app = express();
 
+// Import Routes
+const fibonacciRoutes = require('./api/routes/fibonacci.routes');
+
+const generators = require('./generators');
+
 // Configure Middleware
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,6 +28,19 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+
+// var nums = generators.generator(generators.fibonacciSeq);
+
+// app.get('/', (req, res) => {
+//   var value = nums.next();
+//   res.json(value);
+// })
+
+// Routes to handle requests
+app.use('/', fibonacciRoutes);
+
+app.disable('etag');
 
 app.use((req, res, next) => {
   const error = new Error('Not Found');
