@@ -45,10 +45,36 @@ generators.factorialSeq = () => {
 }
 
 /* 
+ * primeSeq: Returns the next prime number in the sequence
+ */
+generators.primeSeq = () => {
+  return function() {
+    let number = 0;
+    let primes = Object.assign([], utils.primes());
+
+    return {
+      next: function() {
+        let f1 = primes[number];
+        number++;
+        return f1;
+      }
+    }
+  }();
+}
+
+/* 
+ * rangeSeq: Returns the next number in the sequence based on the step
+ */
+generators.rangeSeq = function() {
+  console.log(arguments[1]);
+  console.log(arguments[2]);
+}
+
+/* 
  * Generator: Returns an object. Takes a sequencer as argument
  */
 generators.generator = function(sequencer) {
-  return sequencer();
+  return sequencer(arguments);
 }
 
 module.exports = generators;
