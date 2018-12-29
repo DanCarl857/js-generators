@@ -23,8 +23,9 @@ utils.isPrime = (n) => {
   return n !== 1 && n !== 0;
 }
 
+// Returns an array of primes
 utils.primes = () => {
-  // I assume for now we won't reach this limit
+  // I assume for now we won't reach this limit anytime soon
   let LIMIT = 1000;
   let arrayOfPrimes = [];
   for (let i = 0; i < LIMIT; i++) {
@@ -34,5 +35,23 @@ utils.primes = () => {
   }
   return arrayOfPrimes;
 };
+
+// Return the number given as argument and the status on whether 
+// ..its true or false
+utils.isEven = (number) => {
+  return function(number) {
+    if (number % 2 === 0) {
+      return {
+        status: true,
+        number: number
+      }
+    } else {
+      return {
+        status: false,
+        number: number
+      }
+    }
+  }
+}
 
 module.exports = utils;

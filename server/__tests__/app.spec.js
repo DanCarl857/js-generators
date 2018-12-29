@@ -13,6 +13,8 @@ let fibonacciData = [1,1,2,3];
 let factorialData = [1, 1, 2, 6, 24, 120, 720];
 let primeData = [2, 3, 5, 7, 11];
 let rangeData = [1, 3, 5, 7];
+let isEvenObjOdd = { status: false, number: 3 };
+let isEvenObjEven = { status: true, number: 4 };
 
 // Check to see if app just runs
 describe('Initialization', () => {
@@ -120,4 +122,20 @@ describe('Utility Functions', () => {
       assert.equal(true, Array.isArray(utils.primes()));
     });
   });
+
+  describe('IsEven', () => {
+    it('should return a status of false and number 3 given 3', () => {
+      var ie = utils.isEven();
+      gotten_answer = ie(3);
+
+      assert.deepEqual(gotten_answer, isEvenObjOdd);
+    });
+
+    it('should return a status of true and number 4 given 4', () => {
+      var ie = utils.isEven();
+      gotten_answer = ie(4);
+
+      assert.deepEqual(gotten_answer, isEvenObjEven);
+    })
+  })
 });
