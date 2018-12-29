@@ -1,0 +1,34 @@
+{
+  "name": "fs-dev-generator",
+  "version": "1.0.0",
+  "description": "FS Dev generator project in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && yarn start",
+    "server": "cd client && yarn start",
+    "start": "concurrently - kill-others \"yarn server\" \"yarn client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanCarl857/FS-dev-generator.git"
+  },
+  "keywords": [
+    "js",
+    "generator",
+    "code",
+    "mocha",
+    "react",
+    "nodejs",
+    "tdd"
+  ],
+  "author": "Daniel Carlson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanCarl857/FS-dev-generator/issues"
+  },
+  "homepage": "https://github.com/DanCarl857/FS-dev-generator#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
