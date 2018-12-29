@@ -65,16 +65,27 @@ generators.primeSeq = () => {
 /* 
  * rangeSeq: Returns the next number in the sequence based on the step
  */
-generators.rangeSeq = function() {
-  console.log(arguments[1]);
-  console.log(arguments[2]);
+generators.rangeSeq = function(args) {
+  return function() {
+    let start = args[1];
+    let step = args[2];
+
+    return {
+      next: function() {
+        let f1 = start;
+        start += step;
+        return f1;
+      }
+    }
+  }();
 }
 
 /* 
  * Generator: Returns an object. Takes a sequencer as argument
  */
 generators.generator = function(sequencer) {
-  return sequencer(arguments);
+  // Only pass arguments to the sequencer when arguments are available
+  return arguments.length > 1 ? sequencer(arguments) : sequencer()
 }
 
 module.exports = generators;
