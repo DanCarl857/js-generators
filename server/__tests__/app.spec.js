@@ -31,7 +31,7 @@ describe('REST API', () => {
 // Testing our generators
 describe('Generators', () => {
   it('should return a function when calling the generator', () => {
-    assert.equal('function', typeof generators.fibonacciSeq());
+    assert.equal('function', typeof generators.fibonacciSeq);
   });
 
   it('should return an object when calling the generator with a sequencer', () => {
