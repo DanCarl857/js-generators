@@ -4,9 +4,17 @@
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
+    "bootstrap": "^4.2.1",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2"
+    "react-redux": "^6.0.0",
+    "react-scripts": "2.1.2",
+    "reactstrap": "^7.0.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.7"
+  }
 }
