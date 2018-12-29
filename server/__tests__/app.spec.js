@@ -12,6 +12,7 @@ let utils = require('./../utils');
 let fibonacciData = [1,1,2,3];
 let factorialData = [1, 1, 2, 6, 24, 120, 720];
 let primeData = [2, 3, 5, 7, 11];
+let rangeData = [1, 3, 5, 7];
 
 // Check to see if app just runs
 describe('Initialization', () => {
@@ -81,6 +82,19 @@ describe('Generators', () => {
       gotten_sequence[4] = nums.next();
 
       assert.deepEqual(gotten_sequence, primeData);
+    });
+  });
+
+  describe('Range Sequence Number Generator', () => {
+    it('should return the next numbers in the sequece given a start of 1, and step of 2', () => {
+      let gotten_sequence = [];
+      let nums = generators.generator(generators.rangeSeq, 1, 2);
+      gotten_sequence[0] = nums.next();
+      gotten_sequence[1] = nums.next();
+      gotten_sequence[2] = nums.next();
+      gotten_sequence[3] = nums.next();
+
+      assert.deepEqual(gotten_sequence, rangeData);
     });
   });
 });
