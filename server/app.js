@@ -3,8 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-const utils = require('./utils');
-
 const app = express();
 
 // Import Routes
@@ -31,9 +29,6 @@ app.use((req, res, next) => {
   }
   next();
 });
-
-var ie = utils.isEven();
-console.log(ie(3));
 
 // Routes to handle requests
 app.use('/fibonacci', fibonacciRoutes);
