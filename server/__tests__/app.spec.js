@@ -1,16 +1,17 @@
-var assert = require('assert');
-var request = require('supertest');
+const assert = require('assert');
+const request = require('supertest');
 
 // Import our app
-var app = require('./../app');
+const app = require('./../app');
 
 // Import our generators and utilities
-var generators = require('./../generators');
-var utils = require('./../utils');
+let generators = require('./../generators');
+let utils = require('./../utils');
 
 // Test data
-var fibonacciData = [1,1,2,3];
-var factorialData = [1, 1, 2, 6, 24, 120, 720];
+let fibonacciData = [1,1,2,3];
+let factorialData = [1, 1, 2, 6, 24, 120, 720];
+let primeData = [2, 3, 5, 7, 11];
 
 // Check to see if app just runs
 describe('Initialization', () => {
@@ -42,8 +43,8 @@ describe('Generators', () => {
 
   describe('Fibonacci Sequence Generator', () => {
     it('should return the next 4 fibonacci numbers', () => {
-      var gotten_sequence = [];
-      var nums = generators.generator(generators.fibonacciSeq);
+      let gotten_sequence = [];
+      let nums = generators.generator(generators.fibonacciSeq);
       gotten_sequence[0] = nums.next();
       gotten_sequence[1] = nums.next();
       gotten_sequence[2] = nums.next();
@@ -55,8 +56,8 @@ describe('Generators', () => {
 
   describe('Factorial Sequence Generator', () => {
     it('should return the next 7 numbers in the factorial sequence', () => {
-      var gotten_sequence = [];
-      var nums = generators.generator(generators.factorialSeq);
+      let gotten_sequence = [];
+      let nums = generators.generator(generators.factorialSeq);
       gotten_sequence[0] = nums.next();
       gotten_sequence[1] = nums.next();
       gotten_sequence[2] = nums.next();
@@ -66,7 +67,21 @@ describe('Generators', () => {
       gotten_sequence[6] = nums.next();
 
       assert.deepEqual(gotten_sequence, factorialData);
-    })
+    });
+  });
+
+  describe('Prime Number Sequence Generator', () => {
+    it('should return the next 5 prime numbers', () => {
+      let gotten_sequence = [];
+      let nums = generators.generator(generators.primeSeq);
+      gotten_sequence[0] = nums.next();
+      gotten_sequence[1] = nums.next();
+      gotten_sequence[2] = nums.next();
+      gotten_sequence[3] = nums.next();
+      gotten_sequence[4] = nums.next();
+
+      assert.deepEqual(gotten_sequence, primeData);
+    });
   });
 });
 
@@ -75,6 +90,20 @@ describe('Utility Functions', () => {
   describe('Factorial', () => {
     it('should return the factorial of 10 which is 3628800', () => {
       assert.equal(3628800, utils.factorial(10));
+    });
+  });
+
+  describe('Prime', () => {
+    it('should return true as 3 is prime', () => {
+      assert.equal(true, utils.isPrime(3));
+    });
+
+    it('Should return false as 4 is not prime', () => {
+      assert.equal(false, utils.isPrime(4));
+    });
+
+    it('primes should return an array', () => {
+      assert.equal(true, Array.isArray(utils.primes()));
     });
   });
 });
