@@ -4,9 +4,9 @@
   "description": "Server for my generator project",
   "main": "app.js",
   "scripts": {
-    "test": "mocha",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "test": "mocha __tests__/**.spec.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "node",
@@ -25,6 +25,7 @@
     "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
   }
 }
