@@ -37,6 +37,12 @@ method of design due to the following:
 * As for corners, I implemented the frontend before writing the unit tests.
 * I also hardcoded the start and step values for my range number sequencer, I did same for the partial sum sequencer. This is because taking these as parameters caused my sequencer to only return the first number and I was taking too long to debug the issue.
 
+## Production
+
+* Application is hosted on both Heroku and firebase(kept getting errors when hosting frontend on Heroku).
+* Frontend application is found [here](https://generator-9781d.firebaseapp.com/)
+* Backend application link is [:-)](https://thawing-sands-55019.herokuapp.com/)
+
 ## Development
 
 ```

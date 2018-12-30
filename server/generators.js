@@ -92,15 +92,12 @@ generators.partialSumSeq = function(args) {
 
     return {
       next: () => {
-        let o_f0 = f0;
-        let o_f1 = f1;
+        // let o_f0 = f0;
+        // let o_f1 = f1;
 
-        f0 = o_f1;
-
-        
-
-        // next partial sum number is a sum of the previous 2
-        f1 = o_f1 + f0; 
+        // f0 = o_f1;
+        // // next partial sum number is a sum of the previous 2
+        // f1 = o_f1 + f0; 
 
         return f0;
       }
