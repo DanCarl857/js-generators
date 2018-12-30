@@ -14,6 +14,7 @@ The _front end_ is done in:
 * [Redux-Logger](https://github.com/LogRocket/redux-logger): Logger for redux.
 * [Redux-Dev-Extension-Tools](https://github.com/zalmoxisus/redux-devtools-extension): For debugging purposes
 * [Jest]() and [Enzyme]() are used for testing
+* Also used [Animate.css]() for animations
 
 ## Design
 
@@ -73,8 +74,10 @@ npm install --save <new_dependency>
 
 ### Difficulties
 
-* Hosting the application on Heroku is proving difficult(#WIP: Currently fixing this).
+* Hosting the application on Heroku is proving difficult.
 * Implementing the logic for the piped sequence
+* Implementing Partial Sum Sequencer
+* Making full use of generators in the frontend
 * TDD for react
 
 ### Future Work
