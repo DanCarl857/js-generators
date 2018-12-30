@@ -57,13 +57,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="app-header animated infinite bounce delay-5s">JUMPCUT</h1>
-          <p className="container margin20">
-            This project is about creating pseudo generator functions based on sequencer functions that have been implemented. ES6 generators or async/await wasn't used in the implementations of said sequencer functions. Closures were used to implement the sequencer functions.
+          <h1 className="app-header animated tada delay-1s">JUMPCUT</h1>
+          <p className="container margin20 animated fadeInDownBig delay-1s">
+            This project is about creating pseudo generator functions based on sequencer functions that have been implemented. ES6 generators or async/await was not used in the implementations of said sequencer functions. Closures were used to implement the sequencer functions.
           </p>
 
           {/* Display all our sequencers using our Card component */}
-          <div className="row marginTop20">
+          <div className="row marginTop20 animated fadeInUpBig delay-1s">
             {
               this.props.fibonacciNumber.data ? 
                 <Card 
@@ -118,9 +118,10 @@ class App extends Component {
             }
           </div>
 
-          <p className="container marginTop20">
-            <span className="underline">Source Code</span> | <span className="underline">Documentation</span> | <span className="underline">Daniel Carlson</span>
+          <p className="container marginTop20 animated fadeInLeftBig delay-1s">
+            <span className="underline"><a className="white" href="https://github.com/DanCarl857/FS-dev-generator" target="_blank" rel="noopener noreferrer">Source Code</a></span> | <span className="underline"><a className="white" href="https://github.com/DanCarl857/FS-dev-generator/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></span> | <span className="underline"><a className="white" href="mailto:dancarl758@gmail.com">Daniel Carlson</a></span>
           </p>
+          <p className="container animated fadeInRightBig delay-1s">Copyright (c) 2018.</p>
         </header>
       </div>
     );
