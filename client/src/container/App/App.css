@@ -6,6 +6,8 @@
   background-color: #282c34;
   background-image: linear-gradient(to bottom right, #00767c, #22264b);
   min-height: 100vh;
+  max-height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

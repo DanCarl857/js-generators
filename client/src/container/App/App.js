@@ -119,7 +119,7 @@ class App extends Component {
           </div>
 
           <p className="container marginTop20 animated fadeInLeftBig delay-1s">
-            <span className="underline"><a className="white" href="https://github.com/DanCarl857/FS-dev-generator" target="_blank" rel="noopener noreferrer">Source Code</a></span> | <span className="underline"><a className="white" href="https://github.com/DanCarl857/FS-dev-generator/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></span> | <span className="underline"><a className="white" href="mailto:dancarl758@gmail.com">Daniel Carlson</a></span>
+            <span className="underline"><a className="white" href="https://github.com/DanCarl857/FS-dev-generator" target="_blank" rel="noopener noreferrer">Source Code</a></span> | <span className="underline"><a className="white" href="https://github.com/DanCarl857/FS-dev-generator/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation</a></span>
           </p>
           <p className="container animated fadeInRightBig delay-1s">Copyright (c) 2018.</p>
         </header>

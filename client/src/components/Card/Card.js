@@ -4,17 +4,51 @@ import './Card.css';
 import PropTypes from 'prop-types';
 
 // create a component
-const Card = ({ title, value, getNextFibonacciNumber }) => {
+const Card = ({ 
+  title, 
+  value, 
+  getNextFibonacciNumber,
+  getNextFactorialNumber,
+  getNextPrimeNumber,
+  getNextRangeNumber
+}) => {
   return (
-    <div className="card card-extras m-2">
+    <div className="card card-extras m-lg-2 m-md-2 offset-sm-1 offset-xs-1">
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{value}</p>
-        <button 
-          className="btn btn-primary shadow-none"
-          onClick={() => getNextFibonacciNumber()}>
-          Next Number
-        </button>
+        {
+          getNextFibonacciNumber ? 
+          <button 
+            className="btn btn-primary shadow-none"
+            onClick={() => getNextFibonacciNumber()}>
+            Next Number
+          </button> : <div></div>
+        }
+        {
+          getNextFactorialNumber ? 
+          <button 
+            className="btn btn-primary shadow-none"
+            onClick={() => getNextFactorialNumber()}>
+            Next Number
+          </button> : <div></div>
+        }
+        {
+          getNextPrimeNumber ? 
+          <button 
+            className="btn btn-primary shadow-none"
+            onClick={() => getNextPrimeNumber()}>
+            Next Number
+          </button> : <div></div>
+        }
+        {
+          getNextRangeNumber ? 
+          <button 
+            className="btn btn-primary shadow-none"
+            onClick={() => getNextRangeNumber()}>
+            Next Number
+          </button> : <div></div>
+        }
       </div>
     </div>
   );

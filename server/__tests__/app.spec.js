@@ -13,6 +13,7 @@ let fibonacciData = [1,1,2,3];
 let factorialData = [1, 1, 2, 6, 24, 120, 720];
 let primeData = [2, 3, 5, 7, 11];
 let rangeData = [1, 3, 5, 7];
+let partialSumData = [1, 4, 11, 13];
 let isEvenObjOdd = { status: false, number: 3 };
 let isEvenObjEven = { status: true, number: 4 };
 
@@ -99,6 +100,19 @@ describe('Generators', () => {
       assert.deepEqual(gotten_sequence, rangeData);
     });
   });
+
+  describe('Partial Sum Sequence Number Generator', () => {
+    it('should return the next 4 numbers in the partial sum sequence', () => {
+      let gotten_sequence = [];
+      let nums = generators.generator(generators.partialSumSeq, 1, 3, 7, 2, 0);
+      gotten_sequence[0] = nums.next();
+      gotten_sequence[1] = nums.next();
+      gotten_sequence[2] = nums.next();
+      gotten_sequence[3] = nums.next();
+
+      assert.deepEqual(gotten_sequence, partialSumData);
+    })
+  })
 });
 
 // Testing our Utility functions
