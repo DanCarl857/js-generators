@@ -81,6 +81,34 @@ generators.rangeSeq = function(args) {
 }
 
 /* 
+ * partialSeq: Returns the partial sum sequence of a set of provided numbers
+ */
+generators.partialSumSeq = function(args) {
+  console.log(args.length);
+  return function() {
+    let number = 1
+    let f0 = args[number];
+    let f1 = f0 + args[++number];
+
+    return {
+      next: () => {
+        let o_f0 = f0;
+        let o_f1 = f1;
+
+        f0 = o_f1;
+
+        
+
+        // next partial sum number is a sum of the previous 2
+        f1 = o_f1 + f0; 
+
+        return f0;
+      }
+    }
+  }();
+}
+
+/* 
  * Generator: Returns an object. Takes a sequencer as argument
  */
 generators.generator = function(sequencer) {

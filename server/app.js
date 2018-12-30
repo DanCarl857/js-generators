@@ -10,6 +10,7 @@ const fibonacciRoutes = require('./api/routes/fibonacci.routes');
 const factorialRoutes = require('./api/routes/factorial.routes');
 const primeRoutes = require('./api/routes/prime.routes');
 const rangeRoutes = require('./api/routes/range.routes');
+const partialSumRoutes = require('./api/routes/partialSum.routes');
 
 // Configure Middleware
 app.use(morgan('dev'));
@@ -35,6 +36,7 @@ app.use('/fibonacci', fibonacciRoutes);
 app.use('/factorial', factorialRoutes);
 app.use('/prime', primeRoutes);
 app.use('/range', rangeRoutes);
+app.use('/partial', partialSumRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Not Found');

@@ -5,7 +5,7 @@ A full stack application which creates pseudo generator functions based on *sequ
 
 The _back end_ is done in:
 * [NodeJS]() and [Express](). 
-* For testing, [Mocha] and the Node Assertion Library where used.
+* For testing, [Mocha]() and the Node Assertion Library where used.
 
 The _front end_ is done in:
 * [React]()

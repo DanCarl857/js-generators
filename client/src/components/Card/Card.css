@@ -32,3 +32,24 @@
   font-size: 60px;
   font-weight: 300;
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .card-extras {
+    margin-left: 50px;
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .card-extras {
+    margin-left: 50px;
+  }
+  
+}
