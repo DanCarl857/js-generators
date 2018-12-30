@@ -17,6 +17,7 @@ const Card = ({
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{value}</p>
+        {/* Obviously there are better ways of doing this with more time */}
         {
           getNextFibonacciNumber ? 
           <button 
